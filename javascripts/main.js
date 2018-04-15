@@ -1,4 +1,4 @@
 console.log ('hi!');
-const data = require('./data');
+const data = require('./dataGateKeeper');
 
 data.initializer();
