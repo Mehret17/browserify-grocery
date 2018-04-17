@@ -22,9 +22,7 @@ const hideDepartmentName = (e) => {
 
 const showItem = (e) => {
   const departmentId = e.target.parentNode.children[0].dataset.departmentId;
-  console.log ('data-id',departmentId);
   const selectedItems = data.getItemsByDepartment(departmentId);
-  console.log('selecteditems' , selectedItems);
   departmentContainerDiv.innerHTML = '';
   itemsDom(selectedItems);
 // TODO: filter items by departmentId
