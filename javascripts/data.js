@@ -1,5 +1,6 @@
 let departments = [];
 let items = [];
+const cart = [];
 
 const getDepartments = () => {
   return departments;
@@ -15,6 +16,16 @@ const setItems = (itemsArray) => {
 
 const getItems = () => {
   return items;
+};
+
+const setCart = (itemId, numberToAdd) => {
+  const itemPosition = items.map(function (item) {
+    return item.id;
+  }).indexOf(itemId);
+  const newItem = items[itemPosition];
+  newItem.purchaseNum = numberToAdd;// adding a new key value pair
+  console.log ('itemPosition', newItem);
+  cart.push(newItem);
 };
 
 const getItemsByDepartment = (departmentId) => {
@@ -33,4 +44,5 @@ module.exports = {
   setItems,
   getItems,
   getItemsByDepartment,
+  setCart,
 };
