@@ -21,7 +21,7 @@ const getItems = () => {
 const setCart = (itemId, numberToAdd) => {
   const itemPosition = items.map(function (item) {
     return item.id;
-  }).indexOf(itemId);
+  }).indexOf(itemId);// goes through that new array and asks the position it gives it the same position as the previous one
   const newItem = items[itemPosition];
   newItem.purchaseNum = numberToAdd;// adding a new key value pair
   console.log ('itemPosition', newItem);
